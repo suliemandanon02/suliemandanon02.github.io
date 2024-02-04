@@ -27,19 +27,16 @@
         
         <body>
 
-            <p id="timeStatus">Time status will be displayed here.</p>
+            <p id="ageStatus">Age status will be displayed here.</p>
             
             <script>
-            var timeStatus;
-            var hour = new Date().getHours();
+            var userAge = 25;
             
-            if (hour < 12) {
-              timeStatus = "Good morning!";
+            if (userAge >= 18) {
+              document.getElementById("ageStatus").innerHTML = "Welcome! You are eligible to access this content.";
             } else {
-              timeStatus = "Good afternoon!";
+              document.getElementById("ageStatus").innerHTML = "Sorry, you must be 18 years or older to access this content.";
             }
-            
-            document.getElementById("timeStatus").innerHTML = timeStatus;
             </script>
             
             </body>
