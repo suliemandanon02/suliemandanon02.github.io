@@ -28,14 +28,22 @@
         <body>
 
             <p id="ageStatus">Age status will be displayed here.</p>
+            <button onclick="checkAge()">Check Age</button>
             
             <script>
-            var userAge = 25;
+            function checkAge() {
+              var userInput = prompt("Please enter your age:");
+              var userAge = parseInt(userInput);
             
-            if (userAge >= 18) {
-              document.getElementById("ageStatus").innerHTML = "Welcome! You are eligible to access this content.";
-            } else {
-              document.getElementById("ageStatus").innerHTML = "Sorry, you must be 18 years or older to access this content.";
+              if (!isNaN(userAge)) {
+                if (userAge >= 18) {
+                  document.getElementById("ageStatus").innerHTML = "Welcome! You are eligible to access this content.";
+                } else {
+                  document.getElementById("ageStatus").innerHTML = "Sorry, you must be 18 years or older to access this content.";
+                }
+              } else {
+                document.getElementById("ageStatus").innerHTML = "Invalid input. Please enter a valid age.";
+              }
             }
             </script>
             
