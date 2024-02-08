@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Form Validation</h2>
+
+<form id="myForm" onsubmit="return validateForm()">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <span id="usernameError" class="error"></span><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <span id="emailError" class="error"></span><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br>
+    <span id="passwordError" class="error"></span><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        var usernameError = document.getElementById("usernameError");
+        var emailError = document.getElementById("emailError");
+        var passwordError = document.getElementById("passwordError");
+
+        var isValid = true;
+
+        // Validate username
+        if (username == "") {
+            usernameError.innerText = "Username is required";
+            isValid = false;
+        } else {
+            usernameError.innerText = "";
+        }
+
+        // Validate email
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            emailError.innerText = "Invalid email format";
+            isValid = false;
+        } else {
+            emailError.innerText = "";
+        }
+
+        // Validate password
+        if (password.length < 8) {
+            passwordError.innerText = "Password must be at least 8 characters";
+            isValid = false;
+        } else {
+            passwordError.innerText = "";
+        }
+
+        return isValid;
+    }
+</script>
+
+</body>
+</html>
