@@ -6,7 +6,7 @@ function concatenateStrings($str1, $str2) {
 
 // Define two strings
 $string1 = "Hello";
-$string2 = "world!";
+$string2 = "World!";
 
 // Call the function and store the result
 $result = concatenateStrings($string1, $string2);
