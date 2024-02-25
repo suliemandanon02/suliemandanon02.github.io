@@ -1,3 +1,4 @@
+
 <?php
 // Function to concatenate two strings
 function concatenateStrings($str1, $str2) {
