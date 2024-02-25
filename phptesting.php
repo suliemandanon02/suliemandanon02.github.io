@@ -10,24 +10,6 @@
   <div id="phpOutput">
     <?php include 'strings.php'; ?>
     <?php echo $result; ?>
-    
-<?php
-// Function to concatenate two strings
-function concatenateStrings($str1, $str2) {
-    return $str1 . " " . $str2;
-}
-
-// Define two strings
-$string1 = "Hello";
-$string2 = "World!";
-
-// Call the function and store the result
-$result = concatenateStrings($string1, $string2);
-
-// Output the result
-echo $result;
-?>
-
   </div>
 </body>
 </html>
