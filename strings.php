@@ -1,17 +1,13 @@
-
 <?php
-// Function to concatenate two strings
-function concatenateStrings($str1, $str2) {
-    return $str1 . " " . $str2;
-}
+$greeting = "Hello";
+$name = "Danny";
 
-// Define two strings
-$string1 = "Hello";
-$string2 = "World!";
+// Concatenate strings
+$fullGreeting = $greeting . " " . $name . "!";
 
-// Call the function and store the result
-$result = concatenateStrings($string1, $string2);
+// Output the concatenated string
+echo $fullGreeting . "\n"; // Outputs "Hello Danny!"
 
-// Output the result
-echo $result;
+// Find and output the length of the concatenated string
+echo strlen($fullGreeting); // Outputs the length of "Hello Danny!"
 ?>
