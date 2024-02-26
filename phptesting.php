@@ -8,8 +8,7 @@
 <body>
   <h1>Welcome to PHP TESTING</h1>
   <div id="phpOutput">
-    <?php include 'strings.php';
-    echo $result; ?>
+    <?php include 'strings.php';?>
   </div>
 </body>
 </html>
