@@ -26,9 +26,21 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
     // Output the data
     echo "Username: " . $username . "<br>";
-    echo "Message: " . $message;
-}
-?>
+    echo "Message: " . $message . "<br>";
 
+      // Create a button to go back to the main page
+      echo '<button onclick="goBack()">Go Back</button>';
+  }
+  ?>
+
+  <script>
+    function goBack() {
+      // Get the current URL
+      var currentUrl = window.location.href;
+
+      // Redirect to the main page with the form data included as query parameters
+      window.location.href = 'index.html' + currentUrl.substring(currentUrl.indexOf('?'));
+    }
+  </script>
 </body>
 </html>
