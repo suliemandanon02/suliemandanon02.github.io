@@ -28,12 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     echo "Username: " . $username . "<br>";
     echo "Message: " . $message . "<br>";
 
-      // Create a button to go back to the main page
-      echo '<button onclick="goBack()">Go Back</button>';
+     
   }
   ?>
-
-<?php
+  <?php
 // Check if the username is provided in the URL parameters
 if(isset($_GET['username'])) {
     // Retrieve the username from the URL parameters
@@ -50,6 +48,10 @@ if(isset($_GET['username'])) {
     echo "The length of your username is: " . $nameLength;
 } else {
     echo "Username not provided in the URL parameters.";
+}
+{
+   // Create a button to go back to the main page
+   echo '<button onclick="goBack()">Go Back</button>';
 }
 ?>
 

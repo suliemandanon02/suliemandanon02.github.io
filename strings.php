@@ -1,4 +1,6 @@
+
 <?php
+/*
 // Check if the username is provided in the URL parameters
 if(isset($_GET['username'])) {
     // Retrieve the username from the URL parameters
