@@ -57,14 +57,14 @@ if(isset($_GET['username'])) {
     echo "Username not provided in the URL parameters.";
 }
 
-{
+
    // Create a button to go back to the main page
-   echo '<button onclick="goBack()">Go Back</button>';
-}
+   echo '<button class="goback-button" onclick="goBack()">Go Back</button>';
+
 ?>
 
 
-  <script>
+<script>
     function goBack() {
       // Get the current URL
       var currentUrl = window.location.href;
