@@ -40,6 +40,9 @@
     ?>
   </div>
 
+  <!-- Go Back Button -->
+  <button class="goback-button" onclick="goBack()">Go Back</button>
+
   <!-- Line break -->
   <br>
 
