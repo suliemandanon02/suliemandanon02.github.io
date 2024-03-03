@@ -7,13 +7,16 @@
 </head>
 <body>
   <h2>Submit Form Data Here</h2>
-  <form action="/form.php" method="get" name="myForm">
-    <label for="fname">First name:</label>
-    <input type="text" id="fname" name="fname"><br><br>
-    <label for="lname">Last name:</label>
-    <input type="text" id="lname" name="lname"><br><br>
-    <input type="submit" value="Send form data!">
-  </form>
+  <form action="/form.php" method="get">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username"><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+  <input type="submit" value="Submit">
+</form>
+
 
 <?php
 if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "GET") {
