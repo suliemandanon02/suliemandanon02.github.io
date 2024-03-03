@@ -6,8 +6,8 @@
   <title>Form Submission</title>
 </head>
 <body>
-  <h2>Submit Form Data</h2>
-  <form action="/xxx.php" method="get" name="myForm">
+  <h2>Submit Form Data Here</h2>
+  <form action="/form.php" method="get" name="myForm">
     <label for="fname">First name:</label>
     <input type="text" id="fname" name="fname"><br><br>
     <label for="lname">Last name:</label>
