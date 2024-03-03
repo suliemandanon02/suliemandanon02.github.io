@@ -25,23 +25,31 @@
     <button type="button" onclick="clearForm()">Clear</button>
   </form>
 
-  <?php
-  if ($_SERVER["REQUEST_METHOD"] == "GET") {
-      // Retrieve form data
-      $username = isset($_GET['username']) ? $_GET['username'] : '';
-      $message = isset($_GET['message']) ? $_GET['message'] : '';
+  <!-- Output Section -->
+  <div id="output">
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        // Retrieve form data
+        $username = isset($_GET['username']) ? $_GET['username'] : '';
+        $message = isset($_GET['message']) ? $_GET['message'] : '';
 
-      // Output the data
-      echo "Username: " . $username . "<br>";
-      echo "Message: " . $message . "<br>";
-  }
-  ?>
- <!-- Line break -->
- <br>
+        // Output the data
+        echo "Username: <span id='usernameOutput'>" . $username . "</span><br>";
+        echo "Message: <span id='messageOutput'>" . $message . "</span><br>";
+    }
+    ?>
+  </div>
+
+  <!-- Line break -->
+  <br>
+
   <script>
     function clearForm() {
-      // Reset all input fields in the form
+      // Reset form fields
       document.getElementById("myForm").reset();
+      // Clear output
+      document.getElementById("usernameOutput").textContent = '';
+      document.getElementById("messageOutput").textContent = '';
     }
 
     function goBack() {
