@@ -1,13 +1,19 @@
 <?php
-$greeting = "Hello";
-$name = "Danny";
+// Check if the username is provided in the URL parameters
+if(isset($_GET['username'])) {
+    // Retrieve the username from the URL parameters
+    $name = $_GET['username'];
 
-// Concatenate strings
-$fullGreeting = $greeting . " " . $name . "!";
+    // Count the number of characters in the username
+    $nameLength = strlen($name);
 
-// Output the concatenated string
-echo $fullGreeting . "\n"; // Outputs "Hello Danny!"
+    // Output the concatenated string
+    $fullGreeting = "Hello " . $name . "!";
+    echo $fullGreeting . "<br>";
 
-// Find and output the length of the concatenated string
-echo strlen($fullGreeting); // Outputs the length of "Hello Danny!"
+    // Output the length of the username
+    echo "The length of your username is: " . $nameLength;
+} else {
+    echo "Username not provided in the URL parameters.";
+}
 ?>
