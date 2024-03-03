@@ -10,6 +10,15 @@
   <div id="phpOutput">
     <?php include 'strings.php';?>
   </div>
+  <script>
+    function goBack() {
+      // Get the current URL
+      var currentUrl = window.location.href;
+
+      // Redirect to the main page with the form data included as query parameters
+      window.location.href = 'index.html' + currentUrl.substring(currentUrl.indexOf('?'));
+    }
+  </script>
 </body>
 </html>
 
