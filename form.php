@@ -19,15 +19,16 @@
 
 
 <?php
-if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Retrieve form data
-    $fname = isset($_GET['fname']) ? $_GET['fname'] : '';
-    $lname = isset($_GET['lname']) ? $_GET['lname'] : '';
+    $username = isset($_GET['username']) ? $_GET['username'] : '';
+    $message = isset($_GET['message']) ? $_GET['message'] : '';
 
-    // Do something with the data
-    echo "First Name: " . $fname . "<br>";
-    echo "Last Name: " . $lname;
+    // Output the data
+    echo "Username: " . $username . "<br>";
+    echo "Message: " . $message;
 }
 ?>
+
 </body>
 </html>
