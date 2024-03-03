@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Submission</title>
+  <style>
+  .goback-button {
+    position: fixed;
+    bottom: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+  }
+</style>
 </head>
 <body>
   <h2>Submit Form Data Here</h2>
@@ -49,6 +56,7 @@ if(isset($_GET['username'])) {
 } else {
     echo "Username not provided in the URL parameters.";
 }
+
 {
    // Create a button to go back to the main page
    echo '<button onclick="goBack()">Go Back</button>';
