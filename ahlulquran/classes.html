@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ahlul Quran CLasses</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+
+</style>
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+          <a href=index.html class="w3-bar-item w3-button">Ahlul Quran Academy</a>
+          <!-- Right-sided navbar links. Hide them on small screens -->
+          <div class="w3-right w3-hide-small">
+            <a href= index.html class="w3-bar-item w3-button">Home</a>
+            <a href= Classes.html class="w3-bar-item w3-button">Classes</a>
+            <a href= contact.html class="w3-bar-item w3-button">Contact</a>
+            <a href=Donate.html class="w3-bar-item w3-button">Donate</a>
+        </div>
+          </div>
+        </div>
+      </div>
+     <!-- Classes Section -->
+  <div class="w3-row w3-padding-64" id="Classes">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Our Classes</h1><br>
+      <h4>Nuraniyah</h4>
+      <p class="w3-text-grey">We teach the young students and the beginners about the letters and the pronounciation</p><br>
+    
+      <h4>Reading</h4>
+      <p class="w3-text-grey">We teach the students how to read Quran words and phrases </p><br>
+    
+      <h4>Memorization</h4>
+      <p class="w3-text-grey">We teach the students how to memorize the chapters of the Quran</p><br>
+    
+      <h4>Arabic</h4>
+      <p class="w3-text-grey">We teach the students Arabic to understand what the Quran is teaching</p><br>
+    
+      <h4>Islamic Education</h4>
+      <p class="w3-text-grey">We teach the students Islamic Studies and the history of Islam</p>    
+    </div>
+    
+   <!-- Slideshow Container -->
+<div class="slideshow-container">
+  <!-- Slide 1 -->
+  <div class="mySlides">
+    <img src="class.png" style="width:800px">
+  </div>
+  <!-- Slide 2 -->
+  <div class="mySlides">
+    <img src="student.png" style="width:800px">
+  </div>
+  <!-- Slide 3 -->
+  <div class="mySlides">
+    <img src="teachers.png" style="width:800px">
+  </div>
+  <!-- Slide 4 -->
+  <div class="mySlides">
+    <img src="teaching.png" style="width:800px">
+  </div>
+</div>
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
+  }
+</script>
+
+  </div>
+</body>
