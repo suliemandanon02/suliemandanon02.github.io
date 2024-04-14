@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "your_mysql_password"; // Replace with your MySQL root password
+$password = "rootpass"; // Replace with your MySQL root password
 $dbname = "ahlulquran";
 
 // Create connection
